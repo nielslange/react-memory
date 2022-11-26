@@ -1,0 +1,28 @@
+.Game {
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+button {
+    background: none;
+    border: 2px solid #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin: 0 10px;
+}
+
+button:hover {
+    background: #c23866;
+    color: #fff;
+}
+
+.card-grid {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+}
