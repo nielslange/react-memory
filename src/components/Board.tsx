@@ -1,5 +1,8 @@
-import { Card } from './Card';
+/**
+ * Internal dependencies
+ */
 import { BoardProps } from '../utils/interfaces';
+import { Card } from './card';
 
 export const Board = ( {
 	cards,
