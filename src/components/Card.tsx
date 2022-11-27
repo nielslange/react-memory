@@ -1,12 +1,17 @@
 import classnames from 'classnames';
 import './Card.scss';
+import { CardProps } from '../utils/interfaces';
 
-export const Card = ( { card, handleChoice, flipped, disabled, matched } ) => {
+export const Card = ( {
+	card,
+	disabled,
+	flipped,
+	handleChoice,
+	matched,
+}: CardProps ) => {
 	const handleClick = () => {
 		if ( ! disabled ) handleChoice( card );
 	};
-
-	console.log( matched );
 
 	return (
 		<div className="card">

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Controls } from './components/Controls';
 import { Board } from './components/Board';
 import './Game.scss';
+import { ButtonProps, ImageProps } from './utils/interfaces';
 
 // Prepare the individual cards.
 const cardImagesHard = [
@@ -52,7 +53,7 @@ const cardImagesEasy = [
 
 const Game = () => {
 	const [ cards, setCards ] = useState( [] );
-	const [ turns, setTurns ] = useState();
+	const [ turns, setTurns ] = useState( 0 );
 	const [ choiceOne, setChoiceOne ] = useState( null );
 	const [ choiceTwo, setChoiceTwo ] = useState( null );
 	const [ disabled, setDisabled ] = useState( false );
@@ -80,20 +81,24 @@ const Game = () => {
 
 	// Start game automatically.
 	useEffect( () => {
-		shuffleCards( { number: 6 } );
+		shuffleCards( { number: 6, difficulty: 'easy' } );
 	}, [] );
 
 	// Shuffle cards.
-	const shuffleCards = ( { number, difficulty } ) => {
-		if ( difficulty == 'hard' ) {
-			const cardImages = cardImagesHard;
+	const shuffleCards = ( { number, difficulty }: ButtonProps ): void => {
+		let cardImages: ImageProps[];
+
+		switch ( difficulty ) {
+			case 'easy':
+				cardImages = cardImagesEasy;
+				break;
+			case 'hard':
+				cardImages = cardImagesHard;
+				break;
+			default:
+				cardImages = cardImagesEasy.concat( cardImagesHard );
 		}
 
-		if ( difficulty == 'easy' ) {
-			const cardImages = cardImagesEasy;
-		}
-
-		const cardImages = cardImagesEasy;
 		const slicedCardImages = cardImages.slice( 0, number );
 		const shuffledCards = [ ...slicedCardImages, ...slicedCardImages ]
 			.sort( () => Math.random() - 0.5 )
@@ -106,7 +111,7 @@ const Game = () => {
 	};
 
 	// Handle a choice.
-	const handleChoice = ( card ) => {
+	const handleChoice = ( card: ImageProps ) => {
 		choiceOne ? setChoiceTwo( card ) : setChoiceOne( card );
 	};
 
