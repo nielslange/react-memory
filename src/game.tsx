@@ -11,7 +11,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Board } from './components/board';
 import { ButtonProps, ImageProps } from './utils/interfaces';
 import { Controls } from './components/controls';
-import { aztec, nautical, ramadan, sea } from './icons';
+import { aztec, nautical, ramadan, sea, space } from './icons';
 
 import './game.scss';
 
@@ -63,6 +63,9 @@ const Game = () => {
 				break;
 			case 'sea':
 				cardImages = sea;
+				break;
+			case 'space':
+				cardImages = space;
 				break;
 			default:
 				cardImages = aztec;

@@ -49,6 +49,7 @@ export const Controls = ( {
 							<option value="nautical">Nautical</option>
 							<option value="ramadan">Ramadan</option>
 							<option value="sea">Sea</option>
+							<option value="space">Space</option>
 						</Form.Select>
 					</Col>
 				</Row>
