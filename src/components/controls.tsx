@@ -11,9 +11,10 @@ import { ControlsProps } from '../utils/interfaces';
 export const Controls = ( { shuffleCards }: ControlsProps ) => {
 	return (
 		<Form.Select
-			aria-label="Default select example"
 			onChange={ ( event ) =>
-				shuffleCards( { number: parseInt( event.target.value ) } )
+				shuffleCards( {
+					number: parseInt( event.target.value ),
+				} )
 			}
 		>
 			<option>Select number of cards</option>
