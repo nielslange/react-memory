@@ -2,6 +2,11 @@
  * External dependencies
  */
 import { useEffect, useState } from 'react';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Navbar from 'react-bootstrap/Navbar';
 
 /**
  * Internal dependencies
@@ -134,18 +139,43 @@ const Game = () => {
 
 	// Reset choices & increase turn.
 	return (
-		<div className="Game">
-			<h1>Magic Match</h1>
-			<Controls shuffleCards={ shuffleCards } />
-			<Board
-				cards={ cards }
-				choiceOne={ choiceOne }
-				choiceTwo={ choiceTwo }
-				handleChoice={ handleChoice }
-				disabled={ disabled }
-			/>
-			<div>Turns: { turns } | Timer: 0:00</div>
-		</div>
+		<>
+			<Navbar bg="light" expand="xxl">
+				<Container>
+					<Navbar.Brand>Memory Game</Navbar.Brand>
+					<Navbar.Toggle aria-controls="basic-navbar-nav" />
+					<Navbar.Collapse id="basic-navbar-nav">
+						<Form>
+							<Row>
+								<Col>
+									<Controls shuffleCards={ shuffleCards } />
+								</Col>
+							</Row>
+						</Form>
+					</Navbar.Collapse>
+				</Container>
+			</Navbar>
+
+			<main className="flex-shrink-0">
+				<Container>
+					<div className="Game">
+						<Board
+							cards={ cards }
+							choiceOne={ choiceOne }
+							choiceTwo={ choiceTwo }
+							handleChoice={ handleChoice }
+							disabled={ disabled }
+						/>
+					</div>
+				</Container>
+			</main>
+
+			<footer className="footer mt-auto py-3 bg-light">
+				<Container>
+					<div>Turns: { turns } | Timer: 0:00</div>
+				</Container>
+			</footer>
+		</>
 	);
 };
 
