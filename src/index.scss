@@ -9,3 +9,11 @@ body {
 h1 {
 	color: #d8dee9;
 }
+
+.navbar-collapse {
+	flex-direction: row-reverse;
+}
+
+.form-select {
+	min-width: 150px;
+}

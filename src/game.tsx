@@ -97,7 +97,7 @@ const Game = () => {
 	// Reset choices & increase turn.
 	return (
 		<>
-			<Navbar bg="light" expand="lg">
+			<Navbar bg="light" expand="sm">
 				<Container>
 					<Navbar.Brand>Memory Game</Navbar.Brand>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
