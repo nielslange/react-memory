@@ -1,12 +1,13 @@
 import { Card } from './Card';
+import { BoardProps } from '../utils/interfaces';
 
 export const Board = ( {
 	cards,
 	choiceOne,
 	choiceTwo,
-	handleChoice,
 	disabled,
-} ) => {
+	handleChoice,
+}: BoardProps ) => {
 	return (
 		<div className="card-grid">
 			{ cards.map( ( card ) => {

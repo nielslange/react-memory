@@ -1,4 +1,6 @@
-export const Controls = ( { shuffleCards } ) => {
+import { ControlsProps } from '../utils/interfaces';
+
+export const Controls = ( { shuffleCards }: ControlsProps ) => {
 	return (
 		<>
 			<button
