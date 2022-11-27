@@ -1,10 +1,12 @@
 export interface ButtonProps {
-	number: number;
-	difficulty?: string;
+	number?: number;
+	iconPack?: string;
 }
 
 export interface ControlsProps {
-	shuffleCards: ( { number, difficulty }: ButtonProps ) => void;
+	shuffleCards: ( { number, iconPack }: ButtonProps ) => void;
+	number?: number;
+	iconPack?: string;
 }
 
 export interface ImageProps {
