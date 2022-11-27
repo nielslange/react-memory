@@ -1,6 +1,13 @@
+/**
+ * External dependencies
+ */
 import classnames from 'classnames';
-import './Card.scss';
+
+/**
+ * Internal dependencies
+ */
 import { CardProps } from '../utils/interfaces';
+import './card.scss';
 
 export const Card = ( {
 	card,

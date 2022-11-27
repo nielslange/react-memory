@@ -1,8 +1,15 @@
+/**
+ * External dependencies
+ */
 import { useEffect, useState } from 'react';
-import { Controls } from './components/Controls';
-import { Board } from './components/Board';
-import './Game.scss';
+
+/**
+ * Internal dependencies
+ */
+import { Board } from './components/board';
 import { ButtonProps, ImageProps } from './utils/interfaces';
+import { Controls } from './components/controls';
+import './game.scss';
 
 // Prepare the individual cards.
 const cardImagesHard = [
@@ -87,6 +94,8 @@ const Game = () => {
 	// Shuffle cards.
 	const shuffleCards = ( { number, difficulty }: ButtonProps ): void => {
 		let cardImages: ImageProps[];
+
+		console.log( number );
 
 		switch ( difficulty ) {
 			case 'easy':

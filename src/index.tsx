@@ -1,7 +1,14 @@
+/**
+ * External dependencies
+ */
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import Game from './Game';
+/**
+ * Internal dependencies
+ */
+import Game from './game';
 import './index.scss';
 
 const root = ReactDOM.createRoot( document.getElementById( 'root' ) );

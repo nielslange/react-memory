@@ -38,10 +38,10 @@
 		]
 	},
 	"devDependencies": {
-		"bootstrap": "5.2.1",
+		"@wordpress/prettier-config": "^2.4.0",
+		"bootstrap": "5.2.3",
 		"prettier": "npm:wp-prettier@2.6.2",
-		"react-bootstrap": "2.5.0",
-		"sass": "1.56.1",
-		"@wordpress/prettier-config": "^2.4.0"
+		"react-bootstrap": "2.6.0",
+		"sass": "1.56.1"
 	}
 }

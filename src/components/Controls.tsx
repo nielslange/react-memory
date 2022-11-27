@@ -1,42 +1,26 @@
+/**
+ * External dependencies
+ */
+import Form from 'react-bootstrap/Form';
+
+/**
+ * Internal dependencies
+ */
 import { ControlsProps } from '../utils/interfaces';
 
 export const Controls = ( { shuffleCards }: ControlsProps ) => {
 	return (
-		<>
-			<button
-				onClick={ () =>
-					shuffleCards( { number: 6, difficulty: 'easy' } )
-				}
-			>
-				6 cards <strong>easy</strong>
-			</button>
-			<button
-				onClick={ () =>
-					shuffleCards( { number: 6, difficulty: 'hard' } )
-				}
-			>
-				6 cards <strong>hard</strong>
-			</button>
-			<button
-				onClick={ () =>
-					shuffleCards( { number: 12, difficulty: 'easy' } )
-				}
-			>
-				12 cards <strong>easy</strong>
-			</button>
-			<button
-				onClick={ () =>
-					shuffleCards( { number: 12, difficulty: 'hard' } )
-				}
-			>
-				12 cards <strong>hard</strong>
-			</button>
-			<button onClick={ () => shuffleCards( { number: 24 } ) }>
-				24 cards
-			</button>
-			<button onClick={ () => shuffleCards( { number: 36 } ) }>
-				36 cards
-			</button>
-		</>
+		<Form.Select
+			aria-label="Default select example"
+			onChange={ ( event ) =>
+				shuffleCards( { number: parseInt( event.target.value ) } )
+			}
+		>
+			<option>Select number of cards</option>
+			<option value="6">6 cards</option>
+			<option value="12">12 cards</option>
+			<option value="24">24 cards</option>
+			<option value="36">36 cards</option>
+		</Form.Select>
 	);
 };
