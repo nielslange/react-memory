@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Controls } from './components/Controls';
 import { Board } from './components/Board';
-import './Game.css';
+import './Game.scss';
 
 // Prepare the individual cards.
 const cardImagesHard = [

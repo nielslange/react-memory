@@ -40,6 +40,7 @@
 	"devDependencies": {
 		"bootstrap": "5.2.1",
 		"prettier": "npm:wp-prettier@2.6.2",
-		"react-bootstrap": "2.5.0"
+		"react-bootstrap": "2.5.0",
+		"sass": "1.56.1"
 	}
 }

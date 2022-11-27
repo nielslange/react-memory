@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import './Card.css';
+import './Card.scss';
 
 export const Card = ( { card, handleChoice, flipped, disabled, matched } ) => {
 	const handleClick = () => {
