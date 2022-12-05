@@ -21,8 +21,20 @@ button {
 	grid-gap: 20px;
 }
 
+@media screen and (max-width: 1024px) {
+	.card-grid {
+		grid-template-columns: repeat(6, 1fr);
+	}
+}
+
 @media screen and (max-width: 768px) {
 	.card-grid {
 		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.card-grid {
+		grid-template-columns: repeat(3, 1fr);
 	}
 }
